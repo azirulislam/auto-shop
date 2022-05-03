@@ -4,10 +4,11 @@ import Home from './components/Home/Home';
 import Inventory from './components/Inventory/Inventory';
 import Manage from './components/Manage/Manage';
 import Blogs from './components/Blogs/Blogs';
+import Header from './components/Header/Header';
 function App() {
   return (
     <div className="App">
-      <h2>Hellow World</h2>
+      <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/" element={<Inventory></Inventory>}></Route>
