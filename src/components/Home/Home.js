@@ -3,6 +3,7 @@ import { Carousel } from 'react-bootstrap';
 import car1 from '../../images/carousel/car1.jpg';
 import car2 from '../../images/carousel/car2.jpg';
 import car3 from '../../images/carousel/car3.jpg';
+import Collections from './Collections/Collections';
 
 
 
@@ -47,6 +48,7 @@ const Home = () => {
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
+      <Collections></Collections>
         </div>
     );
 };

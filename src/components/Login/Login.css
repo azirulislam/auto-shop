@@ -1,0 +1,35 @@
+.login-container{
+    width: 400px;
+    height: 450px;
+    margin: 0 auto;
+    border: 1px solid lightpink;
+    border-radius: 8px;
+    justify-content: center;
+
+}
+.login-title{
+    font-size: 35px;
+    text-align: center;
+    color: chocolate;
+    margin-top: 15px;
+}
+.input-group label{
+    display: block;
+    margin-left: 60px;   
+}
+.input-group input{
+    height: 40px;
+    width: 250px;
+    display: block;
+    margin-left: 60px; 
+}
+.form-submit{
+    height: 60px;
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 60px;
+    background-color: darkgray;  
+}
+.p-area{
+    margin-left: 60px;
+}
