@@ -5,31 +5,28 @@
     border: 1px solid lightpink;
     border-radius: 8px;
     justify-content: center;
+    padding-top: 40px;
+    background-color: rgb(228, 215, 215);
 
 }
 .login-title{
     font-size: 35px;
     text-align: center;
-    color: chocolate;
-    margin-top: 15px;
+    color: blue;
 }
 .input-group label{
     display: block;
-    margin-left: 60px;   
+    margin-left: 50px;   
 }
 .input-group input{
     height: 40px;
     width: 250px;
     display: block;
-    margin-left: 60px; 
+    margin-left: 50px; 
 }
-.form-submit{
-    height: 60px;
+.login-btn{
+    height: 40px;
     width: 200px;
     margin-top: 20px;
-    margin-left: 60px;
-    background-color: darkgray;  
-}
-.p-area{
-    margin-left: 60px;
+    margin-left: 50px;  
 }

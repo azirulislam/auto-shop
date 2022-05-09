@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
+
 const Collections = () => {
     const [collections, setCollections] = useState([]);
 
     useEffect( ()=>{
         fetch('products.json')
         .then(res => res.json())
-        .then(data => setCollections(data));
+        .then(data =>setCollections(data));
     }, [])
     return (
         <div id="collection" className='container'>
@@ -15,11 +16,9 @@ const Collections = () => {
             <div className="collection-container">
             {
                 collections.map(collection => <collection
-                    
                     collection={collection}
-                    name={collection.name}
-                >
-                </collection>)
+                    
+                ></collection>)
             }
             </div>
             </div>
