@@ -49,6 +49,7 @@ const Home = () => {
   </Carousel.Item>
 </Carousel>
       <Collections></Collections>
+      
         </div>
     );
 };

@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from 'react';
+import './Collections.css';
+import Product from './Product';
 
 
 const Collections = () => {
     const [collections, setCollections] = useState([]);
 
     useEffect( ()=>{
-        fetch('products.json')
+        fetch('http://localhost:5000/product')
         .then(res => res.json())
-        .then(data =>setCollections(data));
+        .then(data => setCollections(data));
     }, [])
     return (
         <div id="collection" className='container'>
-            <div className="row">
+            <div className="">
             <h1 className='text-primary text-center mt-5'> Latest Collections</h1>
-            <div className="collection-container">
+            <div className="content mi-5">
             {
-                collections.map(collection => <collection
-                    collection={collection}
-                    
-                ></collection>)
+                collections.map(product => <Product
+                    product={product}
+                ></Product>)
             }
             </div>
             </div>
