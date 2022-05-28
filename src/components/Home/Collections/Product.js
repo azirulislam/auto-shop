@@ -1,4 +1,5 @@
 import React from 'react';
+import './Product.css';
 
 const Product = ({ product }) => {
         const {image, name, price, details} = product;
@@ -6,7 +7,7 @@ const Product = ({ product }) => {
         <div>
             <div class="card bg-base-100 shadow-xl">
                 <figure class="px-10 pt-10">
-                    <img src={image} alt="Shoes" class="rounded-xl" />
+                    <img className='con-img' src={image} alt="Shoes" class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
                     <h2 class="card-title">{name}</h2>
