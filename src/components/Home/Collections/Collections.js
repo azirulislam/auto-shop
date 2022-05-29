@@ -18,8 +18,10 @@ const Collections = () => {
             <div className="content mi-5">
             {
                 collections.map(product => <Product
+                    key={product.key}
                     product={product}
                 ></Product>)
+                
             }
             </div>
             </div>

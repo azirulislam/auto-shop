@@ -5,13 +5,12 @@
     border: 1px solid lightpink;
     border-radius: 8px;
     justify-content: center;
+    background-color: blanchedalmond;
 
 }
 .login-title{
     font-size: 35px;
     text-align: center;
-    color: chocolate;
-    margin-top: 15px;
 }
 .input-group label{
     display: block;
@@ -21,15 +20,5 @@
     height: 40px;
     width: 250px;
     display: block;
-    margin-left: 60px; 
-}
-.form-submit{
-    height: 60px;
-    width: 200px;
-    margin-top: 20px;
-    margin-left: 60px;
-    background-color: darkgray;  
-}
-.p-area a{
-    text-decoration: none;
+    margin-left: 50px; 
 }
