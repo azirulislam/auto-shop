@@ -15,13 +15,15 @@
 }
 .input-group label{
     display: block;
-    margin-left: 50px;   
+    margin-left: 50px;
+
 }
 .input-group input{
     height: 40px;
     width: 250px;
+    margin-top: 25px;
     display: block;
-    margin-left: 60px; 
+    
 }
 .form-submit{
     height: 60px;

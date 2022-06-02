@@ -7,7 +7,7 @@ const Collections = () => {
     const [collections, setCollections] = useState([]);
 
     useEffect( ()=>{
-        fetch('http://localhost:5000/product')
+        fetch('https://gentle-crag-85548.herokuapp.com/product')
         .then(res => res.json())
         .then(data => setCollections(data));
     }, [])
@@ -21,7 +21,6 @@ const Collections = () => {
                     key={product.key}
                     product={product}
                 ></Product>)
-                
             }
             </div>
             </div>

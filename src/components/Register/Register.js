@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import './Register.css';
 import icon from '../../images/icon/Background.png';
+import Loading from '../Login/Loading';
 
 
 const Register = () => {
@@ -14,7 +15,16 @@ const Register = () => {
     const [confirmPassword, setConfirmPassword] = useState('') 
     const [error, setError] = useState('');
 
-    const [createUserWithEmailAndPassword ] = useCreateUserWithEmailAndPassword(auth);
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+    ] = useCreateUserWithEmailAndPassword(auth);
+    
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
 
         const emailBlur = event =>{
             setEmail(event.target.value)
@@ -25,6 +35,13 @@ const Register = () => {
         const confirmPasswordBlur = event =>{
             setConfirmPassword(event.target.value)
         };
+        if (user) {
+            navigate(from, {replace: true});
+        }
+        if(loading){
+            return <Loading></Loading>
+        }
+    
         const createUser = event =>{
             event.preventDefault();
             if(password !== confirmPassword){
@@ -52,7 +69,7 @@ const Register = () => {
                     Already have an account?  : <Link className='text-xl text-primary' to='/Login'>Login</Link>
                 </p>
             </div>
-                    <button onClick={() => signInWithgoogle()} className='btn ms-5'> <img className='mr-4' src={icon} alt="" /> Signin with google</button>
+                    <button onClick={() => signInWithgoogle()} className='btn ms-5 mt-3'> <img className='mr-4' src={icon} alt="" /> Signin with google</button>
         </div>
     );
 };
