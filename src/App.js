@@ -14,6 +14,7 @@ import Notfound from './components/Notfound/Notfound';
 function App() {
   return (
     <div className="App">
+      <h2>This is auto-shop</h2>
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
