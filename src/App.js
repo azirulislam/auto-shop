@@ -14,12 +14,11 @@ import Notfound from './components/Notfound/Notfound';
 function App() {
   return (
     <div className="App">
-      <h2>This is auto-shop</h2>
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/Home" element={<Home></Home>}></Route>
-        <Route path="/Manage" element={<RequireAuth><Manage></Manage></RequireAuth>}></Route>
+        <Route path="/Manage/ManageId" element={<RequireAuth><Manage></Manage></RequireAuth>}></Route>
         <Route path="/Blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/Login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
